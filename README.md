@@ -1,6 +1,6 @@
 # Katoto
 
-A real-time AI interview copilot for Windows, in the spirit of Cluely. A small always-on-top overlay listens to your call, transcribes both sides, notices when the interviewer asks a question, and streams a suggested answer from Claude. It also solves whatever is on your screen, and keeps a history of every session with a post-call report.
+A real-time AI interview copilot for Windows, A small always-on-top overlay listens to your call, transcribes both sides, notices when the interviewer asks a question, and streams a suggested answer from Claude. It also solves whatever is on your screen, and keeps a history of every session with a post-call report.
 
 ## Features
 
