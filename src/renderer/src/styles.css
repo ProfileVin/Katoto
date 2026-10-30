@@ -1,0 +1,134 @@
+@import 'tailwindcss';
+@import 'highlight.js/styles/github-dark.css';
+
+@theme {
+  --font-sans: 'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Cascadia Code', Consolas, ui-monospace, monospace;
+  --color-accent: #8b5cf6;
+  --color-accent-soft: #a78bfa;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The overlay window is transparent: only the panel itself is painted. */
+.overlay-body {
+  background: transparent;
+  overflow: hidden;
+  user-select: none;
+}
+
+.dashboard-body {
+  background: #0b0d12;
+  color: #e5e7eb;
+}
+
+.drag {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+.glass {
+  background: rgba(15, 17, 24, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.scroll-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+.scroll-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Markdown answers */
+.md {
+  font-size: 13.5px;
+  line-height: 1.55;
+  user-select: text;
+}
+.md > * + * {
+  margin-top: 0.5em;
+}
+.md strong {
+  color: #fff;
+  font-weight: 600;
+}
+.md ul,
+.md ol {
+  padding-left: 1.2em;
+}
+.md ul {
+  list-style: disc;
+}
+.md ol {
+  list-style: decimal;
+}
+.md li + li {
+  margin-top: 0.2em;
+}
+.md h1,
+.md h2,
+.md h3 {
+  font-weight: 600;
+  color: #fff;
+}
+.md h2 {
+  font-size: 1.1em;
+  margin-top: 1em;
+}
+.md h3 {
+  font-size: 1em;
+}
+.md code:not(pre code) {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+.md pre {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  background: #0d1117;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.md pre code.hljs {
+  background: transparent;
+  padding: 0.75em 0.9em;
+}
+.md a {
+  color: var(--color-accent-soft);
+  text-decoration: underline;
+}
+
+.cursor-blink::after {
+  content: '▍';
+  margin-left: 2px;
+  color: var(--color-accent-soft);
+  animation: blink 1s steps(2, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}

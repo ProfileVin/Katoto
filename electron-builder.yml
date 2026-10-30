@@ -1,0 +1,20 @@
+appId: com.Katoto.app
+productName: Katoto
+directories:
+  buildResources: build
+  output: dist
+files:
+  - out/**
+  - package.json
+  - '!**/*.map'
+win:
+  executableName: Katoto
+  target:
+    - target: nsis
+      arch: [x64]
+nsis:
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+npmRebuild: false
