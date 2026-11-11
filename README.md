@@ -65,7 +65,9 @@ These are global shortcuts, so while Katoto runs they take over those key combin
 | `npm test` | Unit tests (question detector, transcript assembly, PCM encoding) |
 | `npm run typecheck` | TypeScript check for main, preload and renderer |
 | `npm run build` | Typecheck and bundle to `out/` |
-| `npm run build:win` | Build a Windows installer into `dist/` |
+| `npm run build:win` | Build a Windows installer into `../Katoto-dist/` |
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for pushing to GitHub, building and releasing.
 
 ## How it works
 

@@ -2,7 +2,8 @@ appId: com.Katoto.app
 productName: Katoto
 directories:
   buildResources: build
-  output: dist
+  # outside the workspace: VS Code's extension host locks default_app.asar inside it (EPERM on rename)
+  output: ../Katoto-dist
 files:
   - out/**
   - package.json
